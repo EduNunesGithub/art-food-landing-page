@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export const Hero = () => (
   <article className="flex flex-col py-20 text-black w-full">
     <motion.div
-      className="flex flex-col gap-4 max-w-128 w-full"
+      className="flex flex-col gap-6 max-w-128 w-full"
       initial={{ opacity: 0 }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1 }}

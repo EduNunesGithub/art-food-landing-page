@@ -11,8 +11,6 @@ import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { Item, ItemProps } from "@/components/how-it-works/item";
 
-const BLOCK_DELAY = 0.25;
-
 const items: Omit<ItemProps, "baseDelay">[] = [
   {
     Icon: MessageCircleMore,
@@ -33,7 +31,7 @@ const items: Omit<ItemProps, "baseDelay">[] = [
 
 export const HowItWorks = () => (
   <motion.article
-    className="flex flex-col gap-8 items-center text-black w-full"
+    className="flex flex-col gap-6 items-center text-black w-full"
     initial="hidden"
     variants={{
       hidden: {},
@@ -65,7 +63,7 @@ export const HowItWorks = () => (
     </motion.h2>
 
     <motion.ul
-      className="flex flex-wrap gap-6 items-center justify-center w-full"
+      className="flex flex-wrap gap-4 items-center justify-center w-full"
       variants={{
         hidden: { opacity: 0 },
         visible: {

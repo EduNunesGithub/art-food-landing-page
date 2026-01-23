@@ -80,7 +80,7 @@ export const Benefits = () => (
 
     <motion.ul
       className={twMerge(
-        "auto-rows-min gap-6 grid grid-cols-1 items-start justify-items-center w-full",
+        "auto-rows-min gap-4 grid grid-cols-1 items-start justify-items-center w-full",
         "min-[30rem]:grid-cols-2",
         "min-[60rem]:grid-cols-3",
       )}

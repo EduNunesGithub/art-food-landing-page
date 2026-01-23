@@ -1,4 +1,5 @@
 import { Benefits } from "@/components/benefits";
+import { ContactCta } from "@/components/contact-cta";
 import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 
@@ -20,6 +21,12 @@ export default function Page() {
       <section className="flex items-center justify-center px-6 py-12 w-full">
         <div className="flex items-center max-w-278 w-full">
           <Benefits />
+        </div>
+      </section>
+
+      <section className="bg-primary flex items-center justify-center px-6 py-12 w-full">
+        <div className="flex items-center max-w-278 w-full">
+          <ContactCta />
         </div>
       </section>
     </main>
