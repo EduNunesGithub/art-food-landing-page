@@ -48,7 +48,7 @@ export const HowItWorks = () => (
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: 24,
+          x: -24,
         },
         visible: {
           filter: "blur(0rem)",

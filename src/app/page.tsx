@@ -1,3 +1,4 @@
+import { Benefits } from "@/components/benefits";
 import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 
@@ -13,6 +14,12 @@ export default function Page() {
       <section className="bg-[#F4F5F7] flex items-center justify-center px-6 py-12 w-full">
         <div className="flex items-center max-w-278 w-full">
           <HowItWorks />
+        </div>
+      </section>
+
+      <section className="flex items-center justify-center px-6 py-12 w-full">
+        <div className="flex items-center max-w-278 w-full">
+          <Benefits />
         </div>
       </section>
     </main>
