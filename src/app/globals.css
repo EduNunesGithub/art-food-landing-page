@@ -25,7 +25,11 @@
   }
 
   h2 {
-    @apply font-bold text-4xl;
+    @apply font-bold font-playfair-display text-3xl;
+  }
+
+  h3 {
+    @apply font-bold font-playfair-display text-2xl;
   }
 
   p {
