@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Playfair_Display, Roboto, Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import "@/app/globals.css";
 
@@ -52,6 +53,8 @@ export default function RootLayout({
         <Header />
 
         {children}
+
+        <Footer />
       </body>
     </html>
   );
