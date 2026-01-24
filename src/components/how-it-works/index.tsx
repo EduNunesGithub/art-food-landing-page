@@ -35,27 +35,31 @@ export const HowItWorks = () => (
     initial="hidden"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.25 } },
+      visible: {
+        transition: {
+          staggerChildren: 0.5,
+        },
+      },
     }}
     viewport={{ once: true }}
     whileInView="visible"
   >
     <motion.h2
       className="text-center"
+      transition={{
+        duration: 1,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: -24,
+          y: "0.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          y: "0rem",
         },
       }}
     >
@@ -65,26 +69,32 @@ export const HowItWorks = () => (
     <motion.ul
       className="flex flex-wrap gap-4 items-center justify-center w-full"
       variants={{
-        hidden: { opacity: 0 },
+        hidden: {},
         visible: {
-          opacity: 1,
           transition: {
-            staggerChildren: 0.25,
+            staggerChildren: 0.75,
           },
         },
       }}
     >
       {items.map((rest, index) => (
         <motion.li
-          className="flex items-center max-w-64 w-full"
           key={index}
+          className="flex items-center max-w-64 w-full"
+          transition={{
+            duration: 1,
+            ease: "anticipate",
+          }}
           variants={{
-            hidden: { filter: "blur(0.25rem)", opacity: 0, y: 24 },
+            hidden: {
+              filter: "blur(0.25rem)",
+              opacity: 0,
+              y: "1rem",
+            },
             visible: {
               filter: "blur(0rem)",
               opacity: 1,
-              transition: { duration: 1, ease: "anticipate" },
-              y: 0,
+              y: "0rem",
             },
           }}
         >
@@ -94,20 +104,20 @@ export const HowItWorks = () => (
     </motion.ul>
 
     <motion.div
+      transition={{
+        duration: 0.75,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: 24,
+          y: "0.5rem",
         },
         visible: {
-          filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          filter: "blur(0rem)",
+          y: "0rem",
         },
       }}
     >
