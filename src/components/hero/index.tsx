@@ -1,11 +1,16 @@
 "use client";
 
+import React from "react";
 import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { WhatsappMockup } from "@/components/hero/whatsapp-mockup";
 import { Button } from "@/components/ui/button";
 
-export const Hero = () => (
+export type HeroProps = {
+  sectionRef: React.RefObject<HTMLElement | null>;
+};
+
+export const Hero: React.FC<HeroProps> = ({ sectionRef }) => (
   <article className="flex flex-row items-end text-black relative w-full z-0">
     <motion.div
       className="flex flex-col gap-6 max-w-128 w-full z-0"
@@ -52,7 +57,7 @@ export const Hero = () => (
         "sm:left-[73.0215%]",
       )}
     >
-      <WhatsappMockup />
+      <WhatsappMockup sectionRef={sectionRef} />
     </div>
   </article>
 );

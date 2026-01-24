@@ -1,16 +1,12 @@
+import { HeroSection } from "@/app/page-client";
 import { Benefits } from "@/components/benefits";
 import { ContactCta } from "@/components/contact-cta";
-import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 
 export default function Page() {
   return (
     <main className="flex flex-col w-full">
-      <section className="flex items-center justify-center overflow-x-hidden overflow-y-hidden px-6 py-24 w-full">
-        <div className="flex items-center max-w-278 w-full">
-          <Hero />
-        </div>
-      </section>
+      <HeroSection />
 
       <section className="bg-[#F4F5F7] flex items-center justify-center px-6 py-12 w-full">
         <div className="flex items-center max-w-278 w-full">
