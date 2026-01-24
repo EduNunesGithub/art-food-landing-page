@@ -13,7 +13,7 @@ export type HeroProps = {
 export const Hero: React.FC<HeroProps> = ({ sectionRef }) => (
   <article className="flex flex-row items-end text-black relative w-full z-0">
     <motion.div
-      className="flex flex-col gap-6 max-w-128 w-full z-0"
+      className="flex flex-col gap-4 max-w-128 w-full z-0"
       initial={{ opacity: 0 }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1 }}
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({ sectionRef }) => (
         "sm:left-[73.0215%]",
       )}
     >
-      <WhatsappMockup sectionRef={sectionRef} />
+      <WhatsappMockup />
     </div>
   </article>
 );

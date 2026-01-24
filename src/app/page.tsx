@@ -1,4 +1,5 @@
 import { HeroSection } from "@/app/page-client";
+import { AppComingSoon } from "@/components/app-coming-soon";
 import { Benefits } from "@/components/benefits";
 import { ContactCta } from "@/components/contact-cta";
 import { HowItWorks } from "@/components/how-it-works";
@@ -17,6 +18,12 @@ export default function Page() {
       <section className="flex items-center justify-center px-6 py-12 w-full">
         <div className="flex items-center max-w-278 w-full">
           <Benefits />
+        </div>
+      </section>
+
+      <section className="bg-gray flex items-center justify-center overflow-x-hidden overflow-y-hidden px-6 py-24 w-full">
+        <div className="flex items-center max-w-278 w-full">
+          <AppComingSoon />
         </div>
       </section>
 
