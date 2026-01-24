@@ -9,27 +9,31 @@ export const ContactCta = () => (
     initial="hidden"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.25 } },
+      visible: {
+        transition: {
+          staggerChildren: 0.25,
+        },
+      },
     }}
     viewport={{ once: true }}
     whileInView="visible"
   >
     <motion.h2
       className="text-white"
+      transition={{
+        duration: 1,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: -24,
+          y: "1.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          y: "0rem",
         },
       }}
     >
@@ -37,20 +41,20 @@ export const ContactCta = () => (
     </motion.h2>
 
     <motion.div
+      transition={{
+        duration: 0.5,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: 24,
+          y: "1.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          y: "0rem",
         },
       }}
     >
