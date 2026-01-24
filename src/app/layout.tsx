@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Playfair_Display, Roboto } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import { Header } from "@/components/header";
 import "@/app/globals.css";
 
 const lora = Lora({
@@ -41,6 +42,8 @@ export default function RootLayout({
           roboto.variable,
         )}
       >
+        <Header />
+
         {children}
       </body>
     </html>
