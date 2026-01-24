@@ -19,7 +19,7 @@ export const Hero = () => (
         transition={{ duration: 1, ease: "anticipate" }}
         viewport={{ once: true }}
       >
-        Seu especialista em culinária, direto no WhatsApp.
+        Seu especialista em culinária, em breve direto no WhatsApp.
       </motion.h1>
 
       <motion.p
@@ -39,7 +39,7 @@ export const Hero = () => (
         viewport={{ once: true }}
       >
         <Button asLink className="capitalize rounded-full" href="#">
-          Falar com o Artfood no WhatsApp
+          Entrar na lista de espera
         </Button>
       </motion.div>
     </motion.div>

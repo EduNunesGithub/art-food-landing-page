@@ -33,7 +33,7 @@ export const ContactCta = () => (
         },
       }}
     >
-      Comece a comer melhor hoje, com ajuda de quem entende de comida.
+      Comece a comer melhor, com ajuda de quem entende de comida.
     </motion.h2>
 
     <motion.div
@@ -59,7 +59,7 @@ export const ContactCta = () => (
         className="bg-white capitalize rounded-full text-primary"
         href="#"
       >
-        Conversar no WhatsApp agora
+        Entre na lista de espera!
       </Button>
     </motion.div>
   </motion.article>

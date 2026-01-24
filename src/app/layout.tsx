@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Playfair_Display, Roboto } from "next/font/google";
+import { Lora, Playfair_Display, Roboto, Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import "@/app/globals.css";
 
@@ -12,6 +12,12 @@ const lora = Lora({
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
@@ -38,6 +44,7 @@ export default function RootLayout({
           "antialiased",
           lora.variable,
           playfairDisplay.variable,
+          poppins.variable,
           roboto.variable,
         )}
       >
