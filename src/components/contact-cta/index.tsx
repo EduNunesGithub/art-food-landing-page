@@ -54,11 +54,7 @@ export const ContactCta = () => (
         },
       }}
     >
-      <Button
-        asLink
-        className="bg-white capitalize rounded-full text-primary"
-        href="#"
-      >
+      <Button asLink className="bg-white rounded-full text-primary" href="#">
         Entre na lista de espera!
       </Button>
     </motion.div>

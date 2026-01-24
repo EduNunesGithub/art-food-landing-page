@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
   } = props;
 
   const classname = twMerge(
-    "duration-200 cursor-pointer ease-standard flex font-medium items-center justify-center max-w-full text-center transition-all uppercase w-fit",
+    "duration-200 cursor-pointer ease-standard flex font-medium items-center justify-center max-w-full text-center transition-all w-fit",
     "hover:scale-105 hover:brightness-75",
     size === "small" && "min-h-8 px-4 rounded text-sm",
     size === "normal" && "min-h-10 px-4 rounded-lg text-sm",

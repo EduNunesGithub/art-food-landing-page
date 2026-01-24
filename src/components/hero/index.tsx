@@ -38,7 +38,7 @@ export const Hero = () => (
         transition={{ delay: 0.5, duration: 1, ease: "anticipate" }}
         viewport={{ once: true }}
       >
-        <Button asLink className="capitalize rounded-full" href="#">
+        <Button asLink className="rounded-full" href="#">
           Entrar na lista de espera
         </Button>
       </motion.div>
