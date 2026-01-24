@@ -88,7 +88,7 @@ export const HowItWorks = () => (
             },
           }}
         >
-          <Item {...rest} baseDelay={index * 0.25} />
+          <Item {...rest} />
         </motion.li>
       ))}
     </motion.ul>

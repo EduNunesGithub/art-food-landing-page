@@ -3,18 +3,12 @@ import { motion } from "motion/react";
 import { LucideIcon } from "lucide-react";
 
 export type ItemProps = {
-  baseDelay: number;
   Icon: LucideIcon;
   heading: React.ReactNode;
   paragraph: React.ReactNode;
 };
 
-export const Item: React.FC<ItemProps> = ({
-  baseDelay,
-  Icon,
-  heading,
-  paragraph,
-}) => (
+export const Item: React.FC<ItemProps> = ({ Icon, heading, paragraph }) => (
   <article className="flex flex-col gap-2 items-center text-center w-full">
     <div className="bg-primary flex h-16 items-center justify-center rounded-full text-white w-16">
       <Icon className="h-8 stroke-1 w-8" />
