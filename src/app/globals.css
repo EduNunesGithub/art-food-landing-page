@@ -4,9 +4,10 @@
   --breakpoint-sm: 45rem;
   --color-primary: #ea6816;
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
-  --font-lora: --font-lora;
-  --font-playfair-display: --font-playfair-display;
-  --font-roboto: --font-robot;
+  --font-lora: var(--font-lora);
+  --font-playfair-display: var(--font-playfair-display);
+  --font-poppins: var(--font-poppins);
+  --font-roboto: var(--font-roboto);
   --radius-16: 4rem;
   --spacing-66: 16.5rem;
   --spacing-128: 32rem;
@@ -22,15 +23,15 @@
   }
 
   h1 {
-    @apply font-bold font-playfair-display text-4xl;
+    @apply font-bold font-poppins text-4xl;
   }
 
   h2 {
-    @apply font-bold font-playfair-display text-3xl;
+    @apply font-bold font-poppins text-3xl;
   }
 
   h3 {
-    @apply font-bold font-playfair-display text-2xl;
+    @apply font-bold font-poppins text-2xl;
   }
 
   p {

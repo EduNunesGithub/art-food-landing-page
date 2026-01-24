@@ -59,7 +59,7 @@ export const HowItWorks = () => (
         },
       }}
     >
-      Como Funciona (em 3 Passos)
+      Como Funciona
     </motion.h2>
 
     <motion.ul
@@ -118,7 +118,7 @@ export const HowItWorks = () => (
         )}
         href="#"
       >
-        <span>Começar agora no WhatsApp</span>
+        <span>Seja notificado quando lançar</span>
         <ChevronRight
           className={twMerge(
             "duration-200 ease-standard shrink-0 transition-all",
