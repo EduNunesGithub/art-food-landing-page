@@ -41,7 +41,7 @@ export const Mockup: React.FC<MockupProps> = ({
   };
 
   return (
-    <div className="flex h-fit items-center justify-center relative shrink-0 w-fit z-0">
+    <div className="flex h-fit items-center justify-center pointer-events-none relative shrink-0 w-fit z-0">
       <Image
         alt=""
         aria-hidden
@@ -58,7 +58,7 @@ export const Mockup: React.FC<MockupProps> = ({
       <div
         {...props}
         className={twMerge(
-          "absolute auto-rows-min grid grid-cols-1 grid-rows-1 overflow-hidden z-20 bg-orange-500 rounded-[32px]",
+          "absolute auto-rows-min grid grid-cols-1 grid-rows-1 overflow-hidden -z-20",
           props.className,
         )}
         style={{ ...contentStyle, ...props.style }}

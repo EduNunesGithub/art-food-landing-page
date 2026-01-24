@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
+import { WhatsappMockup } from "@/components/hero/whatsapp-mockup";
 import { Button } from "@/components/ui/button";
-import { Mockup } from "@/components/mockup/index";
 
 export const Hero = () => (
   <article className="flex flex-row items-end text-black relative w-full z-0">
@@ -52,7 +52,7 @@ export const Hero = () => (
         "sm:left-[73.0215%]",
       )}
     >
-      <Mockup>Hello World</Mockup>
+      <WhatsappMockup />
     </div>
   </article>
 );

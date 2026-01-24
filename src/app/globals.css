@@ -6,6 +6,7 @@
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --font-lora: --font-lora;
   --font-playfair-display: --font-playfair-display;
+  --font-roboto: --font-robot;
   --radius-16: 4rem;
   --spacing-66: 16.5rem;
   --spacing-128: 32rem;
@@ -17,7 +18,7 @@
 
 @layer base {
   * {
-    @apply tracking-wide;
+    @apply box-border min-h-0 min-w-0 tracking-wide;
   }
 
   h1 {

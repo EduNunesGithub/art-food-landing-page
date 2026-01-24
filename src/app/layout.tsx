@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Playfair_Display } from "next/font/google";
+import { Lora, Playfair_Display, Roboto } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import "@/app/globals.css";
 
@@ -13,6 +13,12 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
   weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -32,6 +38,7 @@ export default function RootLayout({
           "antialiased",
           lora.variable,
           playfairDisplay.variable,
+          roboto.variable,
         )}
       >
         {children}
