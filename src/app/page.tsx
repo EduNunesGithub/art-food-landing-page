@@ -6,7 +6,7 @@ import { HowItWorks } from "@/components/how-it-works";
 export default function Page() {
   return (
     <main className="flex flex-col w-full">
-      <section className="flex items-center justify-center px-6 w-full">
+      <section className="flex items-center justify-center overflow-x-hidden overflow-y-hidden px-6 py-24 w-full">
         <div className="flex items-center max-w-278 w-full">
           <Hero />
         </div>

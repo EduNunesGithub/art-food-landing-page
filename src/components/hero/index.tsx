@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
+import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/ui/button";
+import { Mockup } from "@/components/mockup/index";
 
 export const Hero = () => (
-  <article className="flex flex-col py-20 text-black w-full">
+  <article className="flex flex-row items-end text-black relative w-full z-0">
     <motion.div
-      className="flex flex-col gap-6 max-w-128 w-full"
+      className="flex flex-col gap-6 max-w-128 w-full z-0"
       initial={{ opacity: 0 }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1 }}
@@ -41,5 +43,16 @@ export const Hero = () => (
         </Button>
       </motion.div>
     </motion.div>
+
+    <div
+      aria-hidden
+      className={twMerge(
+        "absolute duration-200 ease-standard flex h-fit items-center justify-center left-1/2 top-0 -translate-x-1/2 transition-all w-80 -z-10",
+        "max-[1024px]:opacity-25",
+        "sm:left-[73.0215%]",
+      )}
+    >
+      <Mockup>Hello World</Mockup>
+    </div>
   </article>
 );
