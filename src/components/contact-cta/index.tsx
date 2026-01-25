@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const ContactCta = () => (
   <motion.article
-    className="flex flex-col gap-6 items-center text-center w-full"
+    className="flex flex-col gap-4 items-center text-center w-full"
     initial="hidden"
     variants={{
       hidden: {},

@@ -3,6 +3,7 @@ import { Benefits } from "@/components/benefits";
 import { ContactCta } from "@/components/contact-cta";
 import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
+import { Pricing } from "@/components/pricing";
 
 export default function Page() {
   return (
@@ -21,7 +22,7 @@ export default function Page() {
 
       <section className="flex items-center justify-center px-6 py-12 w-full">
         <div className="flex items-center max-w-278 w-full">
-          <Benefits />
+          <Pricing />
         </div>
       </section>
 

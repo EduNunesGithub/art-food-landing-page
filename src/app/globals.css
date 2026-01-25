@@ -20,7 +20,7 @@
 
 @layer base {
   * {
-    @apply box-border min-h-0 min-w-0 tracking-wide;
+    @apply box-border font-lora min-h-0 min-w-0 tracking-wide;
   }
 
   h1 {
