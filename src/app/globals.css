@@ -3,6 +3,7 @@
 @theme {
   --breakpoint-sm: 45rem;
   --color-primary: #ea6816;
+  --color-gray: #222931;
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --font-lora: var(--font-lora);
   --font-playfair-display: var(--font-playfair-display);
@@ -19,7 +20,7 @@
 
 @layer base {
   * {
-    @apply box-border min-h-0 min-w-0 tracking-wide;
+    @apply box-border font-lora min-h-0 min-w-0 tracking-wide;
   }
 
   h1 {
@@ -40,5 +41,14 @@
 
   .rtl {
     direction: rtl;
+  }
+
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

@@ -14,18 +14,21 @@ import { Item, ItemProps } from "@/components/how-it-works/item";
 const items: Omit<ItemProps, "baseDelay">[] = [
   {
     Icon: MessageCircleMore,
-    heading: "Você conversa",
-    paragraph: "Diga o que você quer cozinhar, suas restrições ou objetivos.",
+    heading: "Você conversa no WhatsApp",
+    paragraph:
+      "Diga o que você quer cozinhar, suas restrições alimentares ou seus objetivos diretamente pelo WhatsApp.",
   },
   {
     Icon: Brain,
-    heading: "A IA entende seu perfil",
-    paragraph: "Ela grava suas preferências, alergias, metas e limitações.",
+    heading: "A IA entende seu perfil alimentar",
+    paragraph:
+      "A inteligência artificial registra suas preferências, alergias, metas e limitações para personalizar as recomendações.",
   },
   {
     Icon: ClipboardList,
-    heading: "Você recebe tudo pronto",
-    paragraph: "Receitas, cardápios e lista de compras.",
+    heading: "Receitas e organização prontas",
+    paragraph:
+      "Receba receitas personalizadas, cardápios organizados e listas de compras prontas para o dia a dia.",
   },
 ];
 
@@ -35,79 +38,89 @@ export const HowItWorks = () => (
     initial="hidden"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.25 } },
+      visible: {
+        transition: {
+          staggerChildren: 0.5,
+        },
+      },
     }}
     viewport={{ once: true }}
     whileInView="visible"
   >
     <motion.h2
       className="text-center"
+      transition={{
+        duration: 1,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: -24,
+          y: "0.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          y: "0rem",
         },
       }}
     >
-      Como Funciona
+      Como irá funcionar o app de receitas
     </motion.h2>
 
     <motion.ul
       className="flex flex-wrap gap-4 items-center justify-center w-full"
       variants={{
-        hidden: { opacity: 0 },
+        hidden: {},
         visible: {
-          opacity: 1,
           transition: {
-            staggerChildren: 0.25,
+            staggerChildren: 0.75,
           },
         },
       }}
     >
       {items.map((rest, index) => (
         <motion.li
-          className="flex items-center max-w-64 w-full"
           key={index}
+          className="flex items-center max-w-64 w-full"
+          transition={{
+            duration: 1,
+            ease: "anticipate",
+          }}
           variants={{
-            hidden: { filter: "blur(0.25rem)", opacity: 0, y: 24 },
+            hidden: {
+              filter: "blur(0.25rem)",
+              opacity: 0,
+              y: "1rem",
+            },
             visible: {
               filter: "blur(0rem)",
               opacity: 1,
-              transition: { duration: 1, ease: "anticipate" },
-              y: 0,
+              y: "0rem",
             },
           }}
         >
-          <Item {...rest} baseDelay={index * 0.25} />
+          <Item {...rest} />
         </motion.li>
       ))}
     </motion.ul>
 
     <motion.div
+      transition={{
+        duration: 0.75,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: 24,
+          y: "0.5rem",
         },
         visible: {
-          filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          filter: "blur(0rem)",
+          y: "0rem",
         },
       }}
     >

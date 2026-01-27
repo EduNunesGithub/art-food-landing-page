@@ -19,30 +19,12 @@ type Benefit = {
 };
 
 const benefits: Benefit[] = [
-  {
-    Icon: Brain,
-    name: "Conversa como um chef/nutricionista",
-  },
-  {
-    Icon: Ban,
-    name: "Respeita restrições alimentares",
-  },
-  {
-    Icon: Calendar,
-    name: "Cria cardápios personalizados",
-  },
-  {
-    Icon: ShoppingCart,
-    name: "Gera lista de compras automaticamente",
-  },
-  {
-    Icon: History,
-    name: "Lembra do seu histórico",
-  },
-  {
-    Icon: Salad,
-    name: "Sugere variações saudáveis",
-  },
+  { Icon: Brain, name: "Conversa como um chef ou nutricionista" },
+  { Icon: Ban, name: "Respeita suas restrições alimentares" },
+  { Icon: Calendar, name: "Cria cardápios personalizados para sua rotina" },
+  { Icon: ShoppingCart, name: "Gera listas de compras automaticamente" },
+  { Icon: History, name: "Lembra do seu histórico de receitas e preferências" },
+  { Icon: Salad, name: "Sugere variações mais saudáveis para suas receitas" },
 ];
 
 export const Benefits = () => (
@@ -51,43 +33,46 @@ export const Benefits = () => (
     initial="hidden"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.25 } },
+      visible: {
+        transition: {
+          staggerChildren: 0.25,
+        },
+      },
     }}
     viewport={{ once: true }}
     whileInView="visible"
   >
     <motion.h2
-      className="text-left w-full"
+      className="text-center w-full"
+      transition={{
+        duration: 1,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: 24,
+          x: "1.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          x: "0rem",
         },
       }}
     >
-      O que o Artfood AI faz por você
+      O que o ArtFood IA vai fazer por você no dia a dia
     </motion.h2>
 
     <motion.ul
       className={twMerge(
-        "auto-rows-min gap-4 grid grid-cols-1 items-start justify-items-center w-full",
+        "auto-rows-min gap-4 grid grid-cols-1 w-full",
         "min-[30rem]:grid-cols-2",
         "min-[60rem]:grid-cols-3",
       )}
       variants={{
-        hidden: { opacity: 0 },
+        hidden: {},
         visible: {
-          opacity: 1,
           transition: {
             staggerChildren: 0.25,
           },
@@ -96,19 +81,26 @@ export const Benefits = () => (
     >
       {benefits.map(({ Icon, name }, index) => (
         <motion.li
-          className="flex gap-2 items-center justify-start text-black text-base w-full"
           key={index}
+          className="flex gap-2 items-center text-black text-base w-full"
+          transition={{
+            duration: 0.75,
+            ease: "anticipate",
+          }}
           variants={{
-            hidden: { filter: "blur(0.25rem)", opacity: 0, y: 24 },
+            hidden: {
+              filter: "blur(0.25rem)",
+              opacity: 0,
+              y: "0.5rem",
+            },
             visible: {
               filter: "blur(0rem)",
               opacity: 1,
-              transition: { duration: 1, ease: "anticipate" },
-              y: 0,
+              y: "0rem",
             },
           }}
         >
-          <Icon className="h-6 shrink-0 text-primary w-6" />
+          <Icon className="h-6 w-6 shrink-0 text-primary" />
           <span className="font-medium">{name}</span>
         </motion.li>
       ))}

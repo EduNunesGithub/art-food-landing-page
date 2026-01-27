@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://art-food-landing-page.vercel.app/sitemap.xml

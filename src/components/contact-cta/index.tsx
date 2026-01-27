@@ -5,52 +5,57 @@ import { Button } from "@/components/ui/button";
 
 export const ContactCta = () => (
   <motion.article
-    className="flex flex-col gap-6 items-center text-center w-full"
+    className="flex flex-col gap-4 items-center text-center w-full"
     initial="hidden"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.25 } },
+      visible: {
+        transition: {
+          staggerChildren: 0.25,
+        },
+      },
     }}
     viewport={{ once: true }}
     whileInView="visible"
   >
     <motion.h2
       className="text-white"
+      transition={{
+        duration: 1,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: -24,
+          y: "1.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          y: "0rem",
         },
       }}
     >
-      Comece a comer melhor, com ajuda de quem entende de comida.
+      Comece a comer melhor com receitas inteligentes, feitas para seus
+      objetivos.
     </motion.h2>
 
     <motion.div
+      transition={{
+        duration: 0.5,
+        ease: "anticipate",
+      }}
       variants={{
         hidden: {
           filter: "blur(0.25rem)",
           opacity: 0,
-          x: 24,
+          y: "1.5rem",
         },
         visible: {
           filter: "blur(0rem)",
           opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "anticipate",
-          },
-          x: 0,
+          y: "0rem",
         },
       }}
     >

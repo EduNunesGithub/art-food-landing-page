@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
-import { WhatsappMockup } from "@/components/hero/whatsapp-mockup";
+import { Mockup } from "@/components/mockup";
 import { Button } from "@/components/ui/button";
+import mobilePlaceholder from "#/png/mobile-placeholder.png";
 
-export const Hero = () => (
+export const AppComingSoon = () => (
   <motion.article
     className="flex flex-row items-end text-black relative w-full z-0"
     initial="hidden"
@@ -21,7 +23,8 @@ export const Hero = () => (
     whileInView="visible"
   >
     <div className="flex flex-col gap-4 max-w-128 w-full z-0">
-      <motion.h1
+      <motion.h2
+        className="text-white"
         transition={{
           duration: 1,
           ease: "anticipate",
@@ -39,10 +42,11 @@ export const Hero = () => (
           },
         }}
       >
-        O app de receitas inteligente que conversa com você no WhatsApp
-      </motion.h1>
+        O que mais vem por ai: ArtFood App
+      </motion.h2>
 
       <motion.p
+        className="text-white"
         transition={{
           duration: 0.75,
           ease: "anticipate",
@@ -60,10 +64,8 @@ export const Hero = () => (
           },
         }}
       >
-        Crie, registre e organize suas receitas em um só lugar. Em breve, você
-        poderá conversar no WhatsApp com uma inteligência artificial integrada
-        para montar cardápios, listas de compras e adaptar receitas às suas
-        restrições e objetivos.
+        Receitas organizadas, livros de receitas, menus personalizados e grupos
+        de planejamento — tudo conectado ao seu assistente inteligente.
       </motion.p>
 
       <motion.div
@@ -84,33 +86,49 @@ export const Hero = () => (
           },
         }}
       >
-        <Button asLink className="rounded-full" href="#">
+        <Button
+          asLink
+          className="bg-transparent border border-primary rounded-full text-primary"
+          href="#"
+        >
           Entrar na lista de espera!
         </Button>
       </motion.div>
     </div>
 
     <motion.div
-      animate={{
-        filter: "blur(0rem)",
-        y: "0%",
-      }}
       aria-hidden
       className={twMerge(
         "absolute flex h-fit items-center justify-center left-1/2 top-0 -translate-x-1/2 w-80 -z-10",
         "max-[1024px]:opacity-25",
         "sm:left-[73.0215%]",
       )}
-      initial={{
-        filter: "blur(0.5rem)",
-        y: "100%",
-      }}
       transition={{
         duration: 1,
         ease: "anticipate",
       }}
+      variants={{
+        hidden: {
+          filter: "blur(0.5rem)",
+          y: "100%",
+        },
+        visible: {
+          filter: "blur(0rem)",
+          y: "0%",
+        },
+      }}
     >
-      <WhatsappMockup />
+      <Mockup>
+        <Image
+          alt="Prévia do aplicativo ArtFood para organização de receitas e menus"
+          className="h-full object-cover w-full"
+          height={1024}
+          loading="lazy"
+          placeholder="blur"
+          src={mobilePlaceholder}
+          width={512}
+        />
+      </Mockup>
     </motion.div>
   </motion.article>
 );

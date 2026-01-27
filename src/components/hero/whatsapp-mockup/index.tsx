@@ -6,6 +6,7 @@ import {
   Signal,
   Wifi,
 } from "lucide-react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { Mockup } from "@/components/mockup/index";
@@ -175,20 +176,50 @@ export const WhatsappMockup = () => (
         </div>
       </header>
 
-      <div className="auto-rows-min gap-2 grid grid-cols-1 h-full overflow-hidden p-4 w-full">
+      <motion.div
+        className="auto-rows-min gap-2 grid grid-cols-1 h-full overflow-hidden p-4 w-full"
+        initial="hidden"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              delayChildren: 0.25,
+              staggerChildren: 0.75,
+            },
+          },
+        }}
+        viewport={{ once: true }}
+        whileInView="visible"
+      >
         {messages.map(({ content, role }, index) => (
-          <div
+          <motion.div
             className={twMerge(
               "flex flex-col max-w-3/4 p-2 rounded-lg shadow text-xs w-fit",
               role === "user" && "bg-[#DCF7C5] ml-auto",
               role === "assistant" && "bg-white",
             )}
             key={index}
+            transition={{
+              duration: 0.75,
+              ease: "anticipate",
+            }}
+            variants={{
+              hidden: {
+                filter: "blur(0.25rem)",
+                opacity: 0,
+                y: "0.25rem",
+              },
+              visible: {
+                filter: "blur(0rem)",
+                opacity: 1,
+                y: "0rem",
+              },
+            }}
           >
             {content}
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   </Mockup>
 );
