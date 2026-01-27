@@ -7,11 +7,11 @@ const prices: PriceProps[] = [
   {
     anchor: { href: "#", name: "Quero testar" },
     items: [
-      "Acesso a 1000 receitas",
-      "Crie receitas próprias",
-      "Crie menus",
-      "Gere lista de compras",
-      "WhatsApp para buscar receitas de forma fácil",
+      "Acesso a mais de 1.000 receitas",
+      "Crie e salve suas próprias receitas",
+      "Crie menus semanais personalizados",
+      "Gere listas de compras automaticamente",
+      "Busque receitas pelo WhatsApp de forma simples e rápida",
     ],
     name: "Plano Básico",
     trial: "(ou grátis por 7 dias)",
@@ -20,12 +20,12 @@ const prices: PriceProps[] = [
   {
     anchor: { href: "#", name: "Quero testar" },
     items: [
-      "Acesso ilimitado a receitas (incluindo receitas novas e datas comemorativas)",
-      "Crie receitas próprias",
-      "Crie menus",
-      "Crie grupos de planejamento de receitas (viagens, eventos, amigos, etc.)",
-      "Gera listas de compras completas para receitas, menus e grupos",
-      "WhatsApp com assistente inteligente (registro de refeições, dicas do que comer, criação de menus personalizados, envio de fotos para análise de calorias e mais)",
+      "Acesso ilimitado a receitas, incluindo novidades e receitas para datas comemorativas",
+      "Crie, organize e edite suas próprias receitas",
+      "Crie menus personalizados para qualquer ocasião",
+      "Crie grupos de planejamento de receitas para viagens, eventos e momentos especiais",
+      "Gere listas de compras completas a partir de receitas, menus e grupos",
+      "Use o WhatsApp com um assistente inteligente para registrar refeições, receber dicas, criar menus personalizados e analisar calorias por foto",
     ],
     name: "Plano Chef",
     trial: "(ou grátis por 7 dias)",
@@ -66,7 +66,7 @@ export const Pricing = () => (
         },
       }}
     >
-      Preços
+      Planos e preços do app de receitas
     </motion.h2>
 
     <motion.ul

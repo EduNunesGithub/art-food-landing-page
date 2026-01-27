@@ -37,7 +37,8 @@ export const ContactCta = () => (
         },
       }}
     >
-      Comece a comer melhor, com ajuda de quem entende de comida.
+      Comece a comer melhor com receitas inteligentes, feitas para seus
+      objetivos.
     </motion.h2>
 
     <motion.div

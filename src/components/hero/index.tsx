@@ -39,7 +39,7 @@ export const Hero = () => (
           },
         }}
       >
-        Seu especialista em culinária, em breve direto no WhatsApp.
+        O app de receitas inteligente que conversa com você no WhatsApp
       </motion.h1>
 
       <motion.p
@@ -60,8 +60,10 @@ export const Hero = () => (
           },
         }}
       >
-        Receitas, cardápios e listas de compras criados por uma IA que entende
-        suas restrições e seus objetivos.
+        Crie, registre e organize suas receitas em um só lugar. Em breve, você
+        poderá conversar no WhatsApp com uma inteligência artificial integrada
+        para montar cardápios, listas de compras e adaptar receitas às suas
+        restrições e objetivos.
       </motion.p>
 
       <motion.div

@@ -64,8 +64,8 @@ export const AppComingSoon = () => (
           },
         }}
       >
-        Receitas, livros de receitas, menus personalizados e grupos — tudo
-        conectado ao seu assistente.
+        Receitas organizadas, livros de receitas, menus personalizados e grupos
+        de planejamento — tudo conectado ao seu assistente inteligente.
       </motion.p>
 
       <motion.div
@@ -118,9 +118,9 @@ export const AppComingSoon = () => (
         },
       }}
     >
-      <Mockup aria-hidden>
+      <Mockup>
         <Image
-          alt=""
+          alt="Prévia do aplicativo ArtFood para organização de receitas e menus"
           className="h-full object-cover w-full"
           height={1024}
           loading="lazy"

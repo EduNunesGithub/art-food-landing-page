@@ -14,18 +14,21 @@ import { Item, ItemProps } from "@/components/how-it-works/item";
 const items: Omit<ItemProps, "baseDelay">[] = [
   {
     Icon: MessageCircleMore,
-    heading: "Você conversa",
-    paragraph: "Diga o que você quer cozinhar, suas restrições ou objetivos.",
+    heading: "Você conversa no WhatsApp",
+    paragraph:
+      "Diga o que você quer cozinhar, suas restrições alimentares ou seus objetivos diretamente pelo WhatsApp.",
   },
   {
     Icon: Brain,
-    heading: "A IA entende seu perfil",
-    paragraph: "Ela grava suas preferências, alergias, metas e limitações.",
+    heading: "A IA entende seu perfil alimentar",
+    paragraph:
+      "A inteligência artificial registra suas preferências, alergias, metas e limitações para personalizar as recomendações.",
   },
   {
     Icon: ClipboardList,
-    heading: "Você recebe tudo pronto",
-    paragraph: "Receitas, cardápios e lista de compras.",
+    heading: "Receitas e organização prontas",
+    paragraph:
+      "Receba receitas personalizadas, cardápios organizados e listas de compras prontas para o dia a dia.",
   },
 ];
 
@@ -63,7 +66,7 @@ export const HowItWorks = () => (
         },
       }}
     >
-      Como Funciona
+      Como funciona o app de receitas
     </motion.h2>
 
     <motion.ul

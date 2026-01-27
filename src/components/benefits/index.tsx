@@ -19,12 +19,12 @@ type Benefit = {
 };
 
 const benefits: Benefit[] = [
-  { Icon: Brain, name: "Conversa como um chef/nutricionista" },
-  { Icon: Ban, name: "Respeita restrições alimentares" },
-  { Icon: Calendar, name: "Cria cardápios personalizados" },
-  { Icon: ShoppingCart, name: "Gera lista de compras automaticamente" },
-  { Icon: History, name: "Lembra do seu histórico" },
-  { Icon: Salad, name: "Sugere variações saudáveis" },
+  { Icon: Brain, name: "Conversa como um chef ou nutricionista" },
+  { Icon: Ban, name: "Respeita suas restrições alimentares" },
+  { Icon: Calendar, name: "Cria cardápios personalizados para sua rotina" },
+  { Icon: ShoppingCart, name: "Gera listas de compras automaticamente" },
+  { Icon: History, name: "Lembra do seu histórico de receitas e preferências" },
+  { Icon: Salad, name: "Sugere variações mais saudáveis para suas receitas" },
 ];
 
 export const Benefits = () => (
@@ -61,7 +61,7 @@ export const Benefits = () => (
         },
       }}
     >
-      O que o Artfood AI faz por você
+      O que o ArtFood faz por você no dia a dia
     </motion.h2>
 
     <motion.ul
