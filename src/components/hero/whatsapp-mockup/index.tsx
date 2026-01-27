@@ -183,8 +183,8 @@ export const WhatsappMockup = () => (
           hidden: {},
           visible: {
             transition: {
-              delayChildren: 1.25,
-              staggerChildren: 1.25,
+              delayChildren: 0.25,
+              staggerChildren: 0.75,
             },
           },
         }}

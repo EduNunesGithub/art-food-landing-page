@@ -91,25 +91,23 @@ export const Hero = () => (
     </div>
 
     <motion.div
+      animate={{
+        filter: "blur(0rem)",
+        y: "0%",
+      }}
       aria-hidden
       className={twMerge(
         "absolute flex h-fit items-center justify-center left-1/2 top-0 -translate-x-1/2 w-80 -z-10",
         "max-[1024px]:opacity-25",
         "sm:left-[73.0215%]",
       )}
+      initial={{
+        filter: "blur(0.5rem)",
+        y: "100%",
+      }}
       transition={{
         duration: 1,
         ease: "anticipate",
-      }}
-      variants={{
-        hidden: {
-          filter: "blur(0.5rem)",
-          y: "100%",
-        },
-        visible: {
-          filter: "blur(0rem)",
-          y: "0%",
-        },
       }}
     >
       <WhatsappMockup />

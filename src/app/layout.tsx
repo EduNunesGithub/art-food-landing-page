@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lora, Playfair_Display, Roboto, Poppins } from "next/font/google";
+import Script from "next/script";
 import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -30,7 +31,10 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Receitas, Cardápios e Listas de Compras com IA no WhatsApp | ArtFood",
+  alternates: {
+    canonical: "https://art-food-landing-page.vercel.app/",
+  },
+  title: "Receitas e Cardápios Inteligentes com IA | ArtFood",
   description:
     "Crie receitas, cardápios personalizados e listas de compras com uma IA que entende suas restrições e objetivos. Em breve no WhatsApp e no app ArtFood.",
 };
@@ -41,7 +45,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      <head>
+        <Script
+          id="schema-artfood"
+          strategy="beforeInteractive"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              applicationCategory: "HealthApplication",
+              creator: {
+                "@type": "Organization",
+                name: "ArtFood",
+              },
+              description:
+                "Assistente inteligente de receitas que cria cardápios personalizados e listas de compras com base em restrições e objetivos. Disponível via WhatsApp e app.",
+              name: "ArtFood",
+              offers: {
+                "@type": "Offer",
+                availability: "https://schema.org/PreOrder",
+                price: "21.90",
+                priceCurrency: "BRL",
+              },
+              operatingSystem: "Web, Android, iOS",
+            }),
+          }}
+        />
+      </head>
+
       <body
         className={twMerge(
           "antialiased",
