@@ -18,8 +18,8 @@ type SocialMedia = {
 };
 
 const institutional: Institutional[] = [
-  { href: "#", name: "Termos" },
-  { href: "#", name: "Política" },
+  // { href: "#", name: "Termos" },
+  { href: "/politica-de-privacidade", name: "Política" },
   { href: "#", name: "Contato" },
 ];
 
@@ -48,7 +48,7 @@ export const Footer = () => (
         />
       </Link>
 
-      <ul className="flex flex-wrap gap-2 items-center justify-end max-w-full w-full">
+      <ul className="hidden flex-wrap gap-2 items-center justify-end max-w-full w-full">
         {social.map(({ ariaLabel, Icon, href }, index) => (
           <li className="flex h-fit w-fit" key={index}>
             <Link

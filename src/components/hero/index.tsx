@@ -7,7 +7,10 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => (
   <motion.article
-    className="flex flex-row items-end text-black relative w-full z-0"
+    className={twMerge(
+      "flex flex-col gap-y-6 items-center text-black relative w-full z-0",
+      "lg:flex-row lg:items-end lg:gap-y-0",
+    )}
     initial="hidden"
     variants={{
       hidden: {},
@@ -97,9 +100,9 @@ export const Hero = () => (
       }}
       aria-hidden
       className={twMerge(
-        "absolute flex h-fit items-center justify-center left-1/2 top-0 -translate-x-1/2 w-80 -z-10",
-        "max-[1024px]:opacity-25",
-        "sm:left-[73.0215%]",
+        "flex h-fit items-center justify-center left-1/2 top-0 w-80 -z-10",
+        "lg:left-[73.0215%]",
+        "lg:absolute lg:-translate-x-1/2",
       )}
       initial={{
         filter: "blur(0.5rem)",

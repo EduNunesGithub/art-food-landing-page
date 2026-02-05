@@ -4,6 +4,7 @@ import Script from "next/script";
 import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { CookiesPopup } from "@/components/cookies-popup";
 import "@/app/globals.css";
 
 const lora = Lora({
@@ -89,6 +90,7 @@ export default function RootLayout({
         {children}
 
         <Footer />
+        <CookiesPopup />
       </body>
     </html>
   );
