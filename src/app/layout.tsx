@@ -6,6 +6,8 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { CookiesPopup } from "@/components/cookies-popup";
 import "@/app/globals.css";
+import { LeadDialogProvider } from "@/providers/lead-dialog-provider";
+import { LeadDialog } from "@/components/lead-dialog/intex";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -85,12 +87,15 @@ export default function RootLayout({
           roboto.variable,
         )}
       >
-        <Header />
+        <LeadDialogProvider>
+          <Header />
 
-        {children}
+          {children}
 
-        <Footer />
-        <CookiesPopup />
+          <Footer />
+          <CookiesPopup />
+          <LeadDialog />
+        </LeadDialogProvider>
       </body>
     </html>
   );
