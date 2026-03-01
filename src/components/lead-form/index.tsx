@@ -4,13 +4,14 @@ import {
   subscribeToLaunchAction,
   type SubscribeActionState,
 } from "@/actions/subscribe-to-launch.server";
+import { SquareCheck } from "lucide-react";
 import { useActionState, useEffect } from "react";
 
 interface LeadFormProps {
   onSuccess?: () => void;
 }
 
-const initialState: SubscribeActionState = { success: false };
+const initialState: SubscribeActionState = null;
 
 function maskPhone(value: string): string {
   const digits = value.replace(/\D/g, "").slice(0, 11);
@@ -30,28 +31,16 @@ export function LeadForm({ onSuccess }: LeadFormProps) {
   );
 
   useEffect(() => {
-    if (!state.success || !onSuccess) return;
+    if (!state?.success || !onSuccess) return;
     const timer = setTimeout(onSuccess, 2000);
     return () => clearTimeout(timer);
-  }, [onSuccess, state.success]);
+  }, [onSuccess, state?.success]);
 
-  if (state.success) {
+  if (state?.success) {
     return (
       <div className="flex flex-col gap-4 items-center py-4 text-center w-full">
         <div className="bg-green-100 flex items-center justify-center p-4 rounded-2xl">
-          <svg
-            aria-hidden="true"
-            className="h-8 text-green-600 w-8"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2.5}
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M5 13l4 4L19 7" />
-          </svg>
+          <SquareCheck className="h-8 text-green-600 w-8" strokeWidth={1.5} />
         </div>
 
         <div className="flex flex-col gap-1">
@@ -68,9 +57,9 @@ export function LeadForm({ onSuccess }: LeadFormProps) {
 
   return (
     <form action={action} className="flex flex-col gap-4 w-full">
-      {state.errors?.root && (
+      {state && !state.success && (
         <ul className="flex flex-col gap-1">
-          {state.errors.root.map((message) => (
+          {state.details.map((message) => (
             <li className="text-red-500 text-sm" key={message}>
               {message}
             </li>
@@ -90,9 +79,6 @@ export function LeadForm({ onSuccess }: LeadFormProps) {
           required
           type="text"
         />
-        {state.errors?.name && (
-          <span className="text-red-500 text-xs">{state.errors.name[0]}</span>
-        )}
       </div>
 
       <div className="flex flex-col gap-1">
@@ -107,9 +93,6 @@ export function LeadForm({ onSuccess }: LeadFormProps) {
           required
           type="email"
         />
-        {state.errors?.email && (
-          <span className="text-red-500 text-xs">{state.errors.email[0]}</span>
-        )}
       </div>
 
       <div className="flex flex-col gap-1">
@@ -119,6 +102,7 @@ export function LeadForm({ onSuccess }: LeadFormProps) {
         <input
           className="border border-gray-300 px-3 py-2 rounded-md text-sm"
           id="phone"
+          maxLength={16}
           name="phone"
           onChange={(e) => {
             e.target.value = maskPhone(e.target.value);
@@ -126,13 +110,10 @@ export function LeadForm({ onSuccess }: LeadFormProps) {
           placeholder="(11) 99999-9999"
           type="tel"
         />
-        {state.errors?.phone && (
-          <span className="text-red-500 text-xs">{state.errors.phone[0]}</span>
-        )}
       </div>
 
       <button
-        className="bg-primary disabled:cursor-not-allowed cursor-pointer disabled:opacity-60 font-medium px-4 py-2 rounded-md text-sm text-white"
+        className="bg-primary cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 font-medium px-4 py-2 rounded-md text-sm text-white"
         disabled={isPending}
         type="submit"
       >
